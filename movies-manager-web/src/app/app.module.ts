@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {MovieModuleModule} from './movie-module/movie-module.module';
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import {MovieModuleModule} from './movie-module/movie-module.module';
   ],
     imports: [
         BrowserModule,
-        MovieModuleModule
+        MovieModuleModule,
+      HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]

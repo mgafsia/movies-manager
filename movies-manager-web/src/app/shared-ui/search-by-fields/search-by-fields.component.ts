@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-search-by-fields',
@@ -6,10 +7,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./search-by-fields.component.css']
 })
 export class SearchByFieldsComponent implements OnInit {
-
-  constructor() { }
+  line = '';
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
   }
-
 }
