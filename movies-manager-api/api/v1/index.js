@@ -12,15 +12,11 @@ router.get('/api/v1/ping', (req, res) => {
 	});
 });
 
-// methods and services
-
+// methods and services -----------------------------------------------//
 // Search by primaryTitle and originalTile
 router.get('/api/v1/movies/:primaryTitle/:originalTitle', (req, res) => {
 	const primaryTitle = req.params.primaryTitle;
 	const originalTitle = req.params.originalTitle;
-
-	console.log('primaryTitle ', primaryTitle);
-	console.log('originalTitle ', originalTitle);
 
 	MovieSchema.find({
 		primaryTitle: primaryTitle,
