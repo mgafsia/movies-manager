@@ -1,0 +1,40 @@
+<div class="table-holder">
+  <div class="title-holder">
+    <h1 class="list-title">Results : </h1>
+  </div>
+  <mat-spinner *ngIf="isDisplaySpinner"></mat-spinner>
+  <table mat-table *ngIf="isDisplayTable" [dataSource]="this.movies">
+
+    <ng-container matColumnDef="originalTitle">
+      <th class="header name-column" mat-header-cell *matHeaderCellDef>
+        <span>originalTitle</span>
+      </th>
+      <td mat-cell *matCellDef="let request">{{request.originalTitle}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="startYear">
+      <th class="header amount-column" mat-header-cell *matHeaderCellDef>
+        <span>Start Year</span>
+      </th>
+      <td mat-cell *matCellDef="let request">{{request.startYear}}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="genres">
+      <th class="header amount-column" mat-header-cell *matHeaderCellDef>
+        <span>Genre</span>
+      </th>
+      <td mat-cell *matCellDef="let request">{{request.genres}}</td>
+    </ng-container>
+
+    <!-- Action Column -->
+    <ng-container matColumnDef="action">
+      <th mat-header-cell *matHeaderCellDef> Action </th>
+      <td mat-cell *matCellDef="let element" class="action-link">
+        <button class="modif" (click)="openDialog('Update',element)"></button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let request; columns: displayedColumns"></tr>
+  </table>
+</div>

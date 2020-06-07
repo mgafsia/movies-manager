@@ -1,0 +1,30 @@
+<mat-spinner *ngIf="isDisplaySpinner; else movieUpdate"></mat-spinner>
+
+<ng-template #movieUpdate>
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Original Title</mat-label>
+      <input matInput [(ngModel)]="movie.originalTitle">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Start Year</mat-label>
+      <input matInput [(ngModel)]="movie.startYear">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-content>
+    <mat-form-field>
+      <mat-label>Genre</mat-label>
+      <input matInput [(ngModel)]="movie.genres">
+    </mat-form-field>
+  </div>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="cancel()">Cancel</button>
+    <button mat-button cdkFocusInitial (click)="updateMovie()">Valid</button>
+  </div>
+</ng-template>
+

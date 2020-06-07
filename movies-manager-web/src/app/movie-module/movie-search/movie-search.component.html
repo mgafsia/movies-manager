@@ -1,1 +1,12 @@
-<app-search-by-fields></app-search-by-fields>
+<div class="search">
+  <div>
+    <input type="text" placeholder="Primary Title" id="primaryTitle" #primaryTitle>
+    <input type="text" placeholder="Original Title" id="originalTitle" #originalTitle>
+    <button color="elegant" (click)="searchMovies(primaryTitle.value, originalTitle.value)">Search</button>
+  </div>
+  <Br>
+  <div class="list">
+    <app-movie-list [movies]="movies" [isDisplaySpinner]="isDisplaySpinner"></app-movie-list>
+  </div>
+</div>
+

@@ -1,0 +1,64 @@
+.title-holder {
+  border-bottom: 2px solid #f2f2f2;
+  margin-bottom: 10px;
+}
+.table-holder {
+  background-color: white;
+  padding: 5px 15px 15px;
+  border-radius: 5px;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.list-title {
+  font-size: 20px;
+  font-weight: bold;
+  line-height: normal;
+  letter-spacing: 0.5px;
+  margin: 5px;
+}
+
+.mat-header-cell {
+  background-color: #393939;
+  color: white;
+}
+.mat-header-cell:not(:first-child) {
+  padding-left: 0;
+}
+
+.mat-header-cell span {
+  font-weight: 600;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.5px;
+}
+
+.mat-header-cell:first-child {
+  border-top-left-radius: 5px;
+}
+
+.mat-header-cell:last-child {
+  border-top-right-radius: 5px;
+}
+
+.header {
+  padding: 5px;
+}
+
+.name-column {
+  width: 30%;
+  padding-right: 3rem;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+button.modif{
+  width: 25px;
+  height: 25px;
+  background: url("../../../assets/img/edit.png") no-repeat 50% 50%;
+  background-size: 52.5%;
+  border: none;
+  margin: 0px 5px 0px 5px;
+  float:right;
+  border-radius: 50%;
+  cursor: pointer;
+}
