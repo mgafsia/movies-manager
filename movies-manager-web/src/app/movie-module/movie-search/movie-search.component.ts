@@ -20,7 +20,10 @@ export class MovieSearchComponent implements OnInit, OnDestroy {
   }
 
   searchMovies(primaryTitle, originalTitle) {
-    if (!primaryTitle || !originalTitle) return;
+    if (!primaryTitle || !originalTitle) {
+      this.displayOnSnack('Please enter a primary and original title !');
+      return;
+    }
     this.isDisplaySpinner = true;
     this.movieSubscription = this.movieService.getMovieSearchSubscription(primaryTitle, originalTitle).subscribe( results  => {
         this.movies = results;
@@ -29,13 +32,16 @@ export class MovieSearchComponent implements OnInit, OnDestroy {
       ,
       (error) => {
         this.isDisplaySpinner = false;
-        this._snackBar.open('Server Error !', null, {
-          duration: 2000
-        });
+        this.displayOnSnack('Server Error !');
       }
     );
   }
 
+  displayOnSnack(message: string) {
+    this._snackBar.open(message, null, {
+      duration: 2000
+    });
+  }
   ngOnDestroy(): void {
     if (this.movieSubscription) {
       this.movieSubscription.unsubscribe();
