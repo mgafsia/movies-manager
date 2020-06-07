@@ -11,7 +11,9 @@ Front-side : Angular 9 / Material 9
 
 ### Install mongoDB on docker 
 Install docker
+
 copy the data form url  https://datasets.imdbws.com/title.basics.tsv.gz
+
 unzip the data file 
 
 run command : docker run -d -p 27017-27019:27017-27019  --name mongodbca mongo
