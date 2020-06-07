@@ -32,7 +32,11 @@ npm install
 npm run start 
 
 ### Install front side
+The server will run on port 4200
+
 npm install 
 
 npm run start 
+
+
 
