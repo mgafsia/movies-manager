@@ -1,4 +1,4 @@
-# mgafsia-movies-manager
+# Movies Manager
 
 ## Tech environment
 Database : mongodb
