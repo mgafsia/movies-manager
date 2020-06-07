@@ -26,9 +26,11 @@ run command on docker bash :  mongoimport --db canal --collection movies  --type
 The server will run on port 3000
 
 npm install 
+
 npm run start 
 
 ### Install front side
 npm install 
+
 npm run start 
 
